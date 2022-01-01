@@ -1,6 +1,5 @@
 big_O/
 bubble_sort/*
-code_forces/*
 data_structures/*
 insertion_sort/*
 jwdsal2-code/*
@@ -8,3 +7,6 @@ jwdsal2-code.zip
 partition3.cpp
 recursive/*
 hackerrank/*/main
+code_forces/*/main
+code_forces/*/*.out
+code_forces/*/.vimspector.json
