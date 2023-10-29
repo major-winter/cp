@@ -46,9 +46,8 @@ class MinHeap : public BaseHeap {
       if (right_child <= r && H[right_child] < H[smallest_index])
         smallest_index = right_child;
       if (smallest_index != node_index) {
-        cout << smallest_index;
         swap(H[node_index], H[smallest_index]);
-        min_heapify(smallest_index);
+        min_heapify(smallest_index, r);
       }
     };
     void build_min_heap() {
@@ -64,6 +63,7 @@ class MinHeap : public BaseHeap {
         swap(H[0], H[i]);
         min_heapify(0, i - 1);
       }
+      swap(H[0], H[1]);
     }
     void print() {
       for (auto &it : H)
@@ -77,9 +77,9 @@ class MinHeap : public BaseHeap {
 };
 
 int main() {
-  vector<int> list = {2,3,5,1,4};
+  vector<int> list = {2,3,5,1,4, 9, 8,1,12};
   MinHeap h(list);
   h.heap_sort(0, list.size() - 1);
-  // h.print();
+  h.print();
   return 0;
 }
